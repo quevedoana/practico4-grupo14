@@ -4,6 +4,7 @@
  */
 package practico4.grupo14;
 
+//CANDE
 /**
  *
  * @author Candela Naranjo
@@ -31,12 +32,12 @@ public class AltadeMaterias extends javax.swing.JInternalFrame {
         btnGuardarMateria = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTextPane2 = new javax.swing.JTextPane();
+        textoNombreMateria = new javax.swing.JTextPane();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jTextPane3 = new javax.swing.JTextPane();
+        textoAñoPertenece = new javax.swing.JTextPane();
         jLabel4 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextPane1 = new javax.swing.JTextPane();
+        textoCodigoMateria = new javax.swing.JTextPane();
         btnSalirMateria = new javax.swing.JButton();
         btnNuevoMateria = new javax.swing.JButton();
 
@@ -48,19 +49,29 @@ public class AltadeMaterias extends javax.swing.JInternalFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI Variable", 1, 18)); // NOI18N
         jLabel1.setText("Formulario de Materias");
 
-        btnGuardarMateria.setText("Guardar");
+        btnGuardarMateria.setText("Guardar Cambios");
+        btnGuardarMateria.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnGuardarMateriaMouseClicked(evt);
+            }
+        });
+        btnGuardarMateria.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGuardarMateriaActionPerformed(evt);
+            }
+        });
 
         jLabel2.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
         jLabel2.setText("Codigo de Materia:");
 
-        jScrollPane2.setViewportView(jTextPane2);
+        jScrollPane2.setViewportView(textoNombreMateria);
 
-        jScrollPane3.setViewportView(jTextPane3);
+        jScrollPane3.setViewportView(textoAñoPertenece);
 
         jLabel4.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
         jLabel4.setText("Año al que Perenece:");
 
-        jScrollPane1.setViewportView(jTextPane1);
+        jScrollPane1.setViewportView(textoCodigoMateria);
 
         btnSalirMateria.setText("Salir");
         btnSalirMateria.addActionListener(new java.awt.event.ActionListener() {
@@ -69,47 +80,55 @@ public class AltadeMaterias extends javax.swing.JInternalFrame {
             }
         });
 
-        btnNuevoMateria.setText("Nuevo");
+        btnNuevoMateria.setText("Nueva Materia");
+        btnNuevoMateria.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnNuevoMateriaMouseClicked(evt);
+            }
+        });
+        btnNuevoMateria.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNuevoMateriaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(15, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane2)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(48, 48, 48))
             .addGroup(layout.createSequentialGroup()
-                .addGap(34, 34, 34)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(52, 52, 52))
+                        .addGap(61, 61, 61)
+                        .addComponent(btnNuevoMateria, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(41, 41, 41)
+                        .addComponent(btnGuardarMateria))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel2)
-                                    .addComponent(jLabel4)
-                                    .addComponent(jLabel3))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(27, 27, 27)
-                                .addComponent(btnGuardarMateria)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(btnNuevoMateria)
-                                .addGap(37, 37, 37)
-                                .addComponent(btnSalirMateria))
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jScrollPane2)
-                                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addGap(34, 34, 34))
+                        .addGap(103, 103, 103)
+                        .addComponent(jLabel1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(150, 150, 150)
+                        .addComponent(btnSalirMateria, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(27, 27, 27)
+                .addGap(25, 25, 25)
                 .addComponent(jLabel1)
-                .addGap(27, 27, 27)
+                .addGap(29, 29, 29)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
@@ -124,12 +143,13 @@ public class AltadeMaterias extends javax.swing.JInternalFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(20, 20, 20)
                         .addComponent(jLabel4)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnGuardarMateria)
-                    .addComponent(btnNuevoMateria)
-                    .addComponent(btnSalirMateria))
-                .addGap(27, 27, 27))
+                    .addComponent(btnNuevoMateria))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnSalirMateria)
+                .addGap(11, 11, 11))
         );
 
         pack();
@@ -139,6 +159,27 @@ public class AltadeMaterias extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
         this.dispose();
     }//GEN-LAST:event_btnSalirMateriaActionPerformed
+
+    private void btnNuevoMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNuevoMateriaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnNuevoMateriaActionPerformed
+
+    private void btnGuardarMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarMateriaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnGuardarMateriaActionPerformed
+
+    private void btnNuevoMateriaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnNuevoMateriaMouseClicked
+        // CANDE
+        //cargar la materia a la lista
+        //mostrar un dialogo que diga que la materia fue cargado correctamente
+        //que se borren los campos de texto una vez qaue ya se cargo
+    }//GEN-LAST:event_btnNuevoMateriaMouseClicked
+
+    private void btnGuardarMateriaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnGuardarMateriaMouseClicked
+        // TODO add your handling code here:
+        //modificar los campos de la materia
+         //eliminar los campos de texto una vez modificada la materia
+    }//GEN-LAST:event_btnGuardarMateriaMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -152,8 +193,8 @@ public class AltadeMaterias extends javax.swing.JInternalFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JTextPane jTextPane1;
-    private javax.swing.JTextPane jTextPane2;
-    private javax.swing.JTextPane jTextPane3;
+    private javax.swing.JTextPane textoAñoPertenece;
+    private javax.swing.JTextPane textoCodigoMateria;
+    private javax.swing.JTextPane textoNombreMateria;
     // End of variables declaration//GEN-END:variables
 }

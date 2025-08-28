@@ -5,6 +5,10 @@
  */
 package practico4.grupo14;
 
+import clases.*;
+import java.util.HashSet;
+//ESTEBAN -> MAIN
+//TOTO -> ESTETICA, ICONOS 
 /**
  *
  * @author Candela Naranjo
@@ -16,6 +20,9 @@ public class practico4 extends javax.swing.JFrame {
      */
     public practico4() {
         initComponents();
+        //MAIN ESTEBAN
+        HashSet <Alumno> listaAlumnos = new HashSet();
+        HashSet <Materia> listaMaterias = new HashSet();
     }
 
     /**
@@ -28,24 +35,22 @@ public class practico4 extends javax.swing.JFrame {
     private void initComponents() {
 
         jMenuItem1 = new javax.swing.JMenuItem();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTree1 = new javax.swing.JTree();
         Escritorio = new javax.swing.JDesktopPane();
         jMenuBar1 = new javax.swing.JMenuBar();
         VistaAlumnos = new javax.swing.JMenu();
         AgregarAlumno = new javax.swing.JMenuItem();
-        EliminarAlumno = new javax.swing.JMenuItem();
-        ModificarAlumno = new javax.swing.JMenuItem();
         VistaMaterias = new javax.swing.JMenu();
         AgregarMateria = new javax.swing.JMenuItem();
-        EliminarMateria = new javax.swing.JMenuItem();
-        ModificarMateria = new javax.swing.JMenuItem();
         VistaInscripcion = new javax.swing.JMenu();
         AgregarInscripcion = new javax.swing.JMenuItem();
-        EliminarInscripcion = new javax.swing.JMenuItem();
-        ModificarInscripcion = new javax.swing.JMenuItem();
         Salir = new javax.swing.JMenu();
         SalirDeTodo = new javax.swing.JMenuItem();
 
         jMenuItem1.setText("jMenuItem1");
+
+        jScrollPane1.setViewportView(jTree1);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Colegio");
@@ -71,22 +76,6 @@ public class practico4 extends javax.swing.JFrame {
         });
         VistaAlumnos.add(AgregarAlumno);
 
-        EliminarAlumno.setText("Eliminar Alumno");
-        EliminarAlumno.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                EliminarAlumnoActionPerformed(evt);
-            }
-        });
-        VistaAlumnos.add(EliminarAlumno);
-
-        ModificarAlumno.setText("Modificar Alumno");
-        ModificarAlumno.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ModificarAlumnoActionPerformed(evt);
-            }
-        });
-        VistaAlumnos.add(ModificarAlumno);
-
         jMenuBar1.add(VistaAlumnos);
 
         VistaMaterias.setText("Materia");
@@ -99,17 +88,6 @@ public class practico4 extends javax.swing.JFrame {
         });
         VistaMaterias.add(AgregarMateria);
 
-        EliminarMateria.setText("Eliminar Materia");
-        VistaMaterias.add(EliminarMateria);
-
-        ModificarMateria.setText("Modificar Materia");
-        ModificarMateria.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ModificarMateriaActionPerformed(evt);
-            }
-        });
-        VistaMaterias.add(ModificarMateria);
-
         jMenuBar1.add(VistaMaterias);
 
         VistaInscripcion.setText("Registro");
@@ -121,17 +99,6 @@ public class practico4 extends javax.swing.JFrame {
             }
         });
         VistaInscripcion.add(AgregarInscripcion);
-
-        EliminarInscripcion.setText("Eliminar Inscripción");
-        VistaInscripcion.add(EliminarInscripcion);
-
-        ModificarInscripcion.setText("Modificar Inscripción");
-        ModificarInscripcion.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ModificarInscripcionActionPerformed(evt);
-            }
-        });
-        VistaInscripcion.add(ModificarInscripcion);
 
         jMenuBar1.add(VistaInscripcion);
 
@@ -188,22 +155,6 @@ public class practico4 extends javax.swing.JFrame {
         formularioFrame.setVisible(true);
     }//GEN-LAST:event_AgregarInscripcionActionPerformed
 
-    private void ModificarAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificarAlumnoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ModificarAlumnoActionPerformed
-
-    private void EliminarAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EliminarAlumnoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_EliminarAlumnoActionPerformed
-
-    private void ModificarMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificarMateriaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ModificarMateriaActionPerformed
-
-    private void ModificarInscripcionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificarInscripcionActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ModificarInscripcionActionPerformed
-
     private void SalirDeTodoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirDeTodoActionPerformed
         // TODO add your handling code here:
         System.exit(0);
@@ -249,13 +200,7 @@ public class practico4 extends javax.swing.JFrame {
     private javax.swing.JMenuItem AgregarAlumno;
     private javax.swing.JMenuItem AgregarInscripcion;
     private javax.swing.JMenuItem AgregarMateria;
-    private javax.swing.JMenuItem EliminarAlumno;
-    private javax.swing.JMenuItem EliminarInscripcion;
-    private javax.swing.JMenuItem EliminarMateria;
     private javax.swing.JDesktopPane Escritorio;
-    private javax.swing.JMenuItem ModificarAlumno;
-    private javax.swing.JMenuItem ModificarInscripcion;
-    private javax.swing.JMenuItem ModificarMateria;
     private static javax.swing.JMenu Salir;
     private javax.swing.JMenuItem SalirDeTodo;
     private static javax.swing.JMenu VistaAlumnos;
@@ -263,5 +208,7 @@ public class practico4 extends javax.swing.JFrame {
     private static javax.swing.JMenu VistaMaterias;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTree jTree1;
     // End of variables declaration//GEN-END:variables
 }
