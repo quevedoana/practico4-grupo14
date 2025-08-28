@@ -27,21 +27,109 @@ public class practico4 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        Escritorio = new javax.swing.JDesktopPane();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        VistaAlumnos = new javax.swing.JMenu();
+        AgregarAlumno = new javax.swing.JMenuItem();
+        VistaMaterias = new javax.swing.JMenu();
+        AgregarMateria = new javax.swing.JMenuItem();
+        VistaInscripcion = new javax.swing.JMenu();
+        AgregarInscripcion = new javax.swing.JMenuItem();
+        Salir = new javax.swing.JMenu();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Colegio");
+
+        javax.swing.GroupLayout EscritorioLayout = new javax.swing.GroupLayout(Escritorio);
+        Escritorio.setLayout(EscritorioLayout);
+        EscritorioLayout.setHorizontalGroup(
+            EscritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 488, Short.MAX_VALUE)
+        );
+        EscritorioLayout.setVerticalGroup(
+            EscritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 408, Short.MAX_VALUE)
+        );
+
+        VistaAlumnos.setText("Alumno");
+
+        AgregarAlumno.setText("Agregar Alumno");
+        AgregarAlumno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AgregarAlumnoActionPerformed(evt);
+            }
+        });
+        VistaAlumnos.add(AgregarAlumno);
+
+        jMenuBar1.add(VistaAlumnos);
+
+        VistaMaterias.setText("Materia");
+
+        AgregarMateria.setText("Agregar Materia");
+        AgregarMateria.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AgregarMateriaActionPerformed(evt);
+            }
+        });
+        VistaMaterias.add(AgregarMateria);
+
+        jMenuBar1.add(VistaMaterias);
+
+        VistaInscripcion.setText("Registro");
+
+        AgregarInscripcion.setText("Agregar Inscripcion");
+        AgregarInscripcion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AgregarInscripcionActionPerformed(evt);
+            }
+        });
+        VistaInscripcion.add(AgregarInscripcion);
+
+        jMenuBar1.add(VistaInscripcion);
+
+        Salir.setText("Salir");
+        jMenuBar1.add(Salir);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(Escritorio)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(Escritorio, javax.swing.GroupLayout.Alignment.TRAILING)
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void AgregarMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AgregarMateriaActionPerformed
+        // TODO add your handling code here:
+        AltadeMaterias materiaFrame = new AltadeMaterias();
+        materiaFrame.setLocation((Escritorio.getWidth() - materiaFrame.getWidth()) / 2,(Escritorio.getHeight() - materiaFrame.getHeight()) / 2);
+        Escritorio.add(materiaFrame);
+        materiaFrame.setVisible(true);
+    }//GEN-LAST:event_AgregarMateriaActionPerformed
+
+    private void AgregarAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AgregarAlumnoActionPerformed
+        // TODO add your handling code here:
+        AltadeAlumnos alumnoFrame = new AltadeAlumnos();
+        alumnoFrame.setLocation((Escritorio.getWidth() - alumnoFrame.getWidth()) / 2,(Escritorio.getHeight() - alumnoFrame.getHeight()) / 2);
+        Escritorio.add(alumnoFrame);
+        alumnoFrame.setVisible(true);
+    }//GEN-LAST:event_AgregarAlumnoActionPerformed
+
+    private void AgregarInscripcionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AgregarInscripcionActionPerformed
+        // TODO add your handling code here:
+        FormulariodeInscripcion formularioFrame = new FormulariodeInscripcion();
+        formularioFrame.setLocation((Escritorio.getWidth() - formularioFrame.getWidth()) / 2,(Escritorio.getHeight() - formularioFrame.getHeight()) / 2);
+        Escritorio.add(formularioFrame);
+        formularioFrame.setVisible(true);
+    }//GEN-LAST:event_AgregarInscripcionActionPerformed
 
     /**
      * @param args the command line arguments
@@ -74,10 +162,20 @@ public class practico4 extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new practico4().setVisible(true);
+                
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem AgregarAlumno;
+    private javax.swing.JMenuItem AgregarInscripcion;
+    private javax.swing.JMenuItem AgregarMateria;
+    private javax.swing.JDesktopPane Escritorio;
+    private javax.swing.JMenu Salir;
+    private javax.swing.JMenu VistaAlumnos;
+    private javax.swing.JMenu VistaInscripcion;
+    private javax.swing.JMenu VistaMaterias;
+    private javax.swing.JMenuBar jMenuBar1;
     // End of variables declaration//GEN-END:variables
 }
