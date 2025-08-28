@@ -15,6 +15,7 @@ public class FormulariodeInscripcion extends javax.swing.JInternalFrame {
      */
     public FormulariodeInscripcion() {
         initComponents();
+        //comboMaterias.addItem("Materia") -> hacerlo en un for a medida que se cargen en la lista materias/alumnos
     }
 
     /**
@@ -46,6 +47,11 @@ public class FormulariodeInscripcion extends javax.swing.JInternalFrame {
         jLabel3.setText("Elija un Alumno:");
 
         comboMaterias.setSelectedIndex(-1);
+        comboMaterias.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comboMateriasActionPerformed(evt);
+            }
+        });
 
         btnInscribir.setText("Inscribir");
         btnInscribir.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -110,6 +116,10 @@ public class FormulariodeInscripcion extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
         this.dispose();
     }//GEN-LAST:event_btnSalirInscripcionActionPerformed
+
+    private void comboMateriasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboMateriasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_comboMateriasActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

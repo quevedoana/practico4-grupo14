@@ -27,15 +27,24 @@ public class practico4 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jMenuItem1 = new javax.swing.JMenuItem();
         Escritorio = new javax.swing.JDesktopPane();
         jMenuBar1 = new javax.swing.JMenuBar();
         VistaAlumnos = new javax.swing.JMenu();
         AgregarAlumno = new javax.swing.JMenuItem();
+        EliminarAlumno = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
         VistaMaterias = new javax.swing.JMenu();
         AgregarMateria = new javax.swing.JMenuItem();
+        EliminarMateria = new javax.swing.JMenuItem();
+        ModificarMateria = new javax.swing.JMenuItem();
         VistaInscripcion = new javax.swing.JMenu();
         AgregarInscripcion = new javax.swing.JMenuItem();
+        EliminarInscripcion = new javax.swing.JMenuItem();
+        jMenuItem3 = new javax.swing.JMenuItem();
         Salir = new javax.swing.JMenu();
+
+        jMenuItem1.setText("jMenuItem1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Colegio");
@@ -61,6 +70,22 @@ public class practico4 extends javax.swing.JFrame {
         });
         VistaAlumnos.add(AgregarAlumno);
 
+        EliminarAlumno.setText("Eliminar Alumno");
+        EliminarAlumno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EliminarAlumnoActionPerformed(evt);
+            }
+        });
+        VistaAlumnos.add(EliminarAlumno);
+
+        jMenuItem2.setText("Modificar Alumno");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
+        VistaAlumnos.add(jMenuItem2);
+
         jMenuBar1.add(VistaAlumnos);
 
         VistaMaterias.setText("Materia");
@@ -73,17 +98,34 @@ public class practico4 extends javax.swing.JFrame {
         });
         VistaMaterias.add(AgregarMateria);
 
+        EliminarMateria.setText("Eliminar Materia");
+        VistaMaterias.add(EliminarMateria);
+
+        ModificarMateria.setText("Modificar Materia");
+        ModificarMateria.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ModificarMateriaActionPerformed(evt);
+            }
+        });
+        VistaMaterias.add(ModificarMateria);
+
         jMenuBar1.add(VistaMaterias);
 
         VistaInscripcion.setText("Registro");
 
-        AgregarInscripcion.setText("Agregar Inscripcion");
+        AgregarInscripcion.setText("Agregar Inscripción");
         AgregarInscripcion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 AgregarInscripcionActionPerformed(evt);
             }
         });
         VistaInscripcion.add(AgregarInscripcion);
+
+        EliminarInscripcion.setText("Eliminar Inscripción");
+        VistaInscripcion.add(EliminarInscripcion);
+
+        jMenuItem3.setText("Modificar Inscripción");
+        VistaInscripcion.add(jMenuItem3);
 
         jMenuBar1.add(VistaInscripcion);
 
@@ -131,6 +173,18 @@ public class practico4 extends javax.swing.JFrame {
         formularioFrame.setVisible(true);
     }//GEN-LAST:event_AgregarInscripcionActionPerformed
 
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void EliminarAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EliminarAlumnoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_EliminarAlumnoActionPerformed
+
+    private void ModificarMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificarMateriaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ModificarMateriaActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -171,11 +225,18 @@ public class practico4 extends javax.swing.JFrame {
     private javax.swing.JMenuItem AgregarAlumno;
     private javax.swing.JMenuItem AgregarInscripcion;
     private javax.swing.JMenuItem AgregarMateria;
+    private javax.swing.JMenuItem EliminarAlumno;
+    private javax.swing.JMenuItem EliminarInscripcion;
+    private javax.swing.JMenuItem EliminarMateria;
     private javax.swing.JDesktopPane Escritorio;
+    private javax.swing.JMenuItem ModificarMateria;
     private javax.swing.JMenu Salir;
     private javax.swing.JMenu VistaAlumnos;
     private javax.swing.JMenu VistaInscripcion;
     private javax.swing.JMenu VistaMaterias;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
     // End of variables declaration//GEN-END:variables
 }

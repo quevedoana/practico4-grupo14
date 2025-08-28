@@ -40,6 +40,7 @@ public class AltadeAlumnos extends javax.swing.JInternalFrame {
         btnNuevoAlumno = new javax.swing.JButton();
         btnSalirAlumno = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(255, 255, 255));
         setTitle("Formulario Alumnos");
 
         jLabel1.setFont(new java.awt.Font("Segoe UI Variable", 1, 18)); // NOI18N
@@ -61,6 +62,11 @@ public class AltadeAlumnos extends javax.swing.JInternalFrame {
         jScrollPane3.setViewportView(jTextPane3);
 
         btnGuardarAlumno.setText("Guardar");
+        btnGuardarAlumno.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                btnGuardarAlumnoKeyTyped(evt);
+            }
+        });
 
         btnNuevoAlumno.setText("Nuevo");
 
@@ -139,6 +145,10 @@ public class AltadeAlumnos extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
         this.dispose();
     }//GEN-LAST:event_btnSalirAlumnoActionPerformed
+
+    private void btnGuardarAlumnoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btnGuardarAlumnoKeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnGuardarAlumnoKeyTyped
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
