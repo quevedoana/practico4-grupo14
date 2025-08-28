@@ -7,7 +7,7 @@ package practico4.grupo14;
 
 /**
  *
- * @author Anitabonita
+ * @author Candela Naranjo
  */
 public class practico4 extends javax.swing.JFrame {
 

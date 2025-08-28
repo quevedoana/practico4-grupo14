@@ -6,7 +6,7 @@ package practico4.grupo14;
 
 /**
  *
- * @author Leandro Naranjo
+ * @author Candela Naranjo
  */
 public class AltadeAlumnos extends javax.swing.JInternalFrame {
 

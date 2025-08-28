@@ -6,7 +6,7 @@ package practico4.grupo14;
 
 /**
  *
- * @author Leandro Naranjo
+ * @author Candela Naranjo
  */
 public class FormulariodeInscripcion extends javax.swing.JInternalFrame {
 
@@ -29,8 +29,8 @@ public class FormulariodeInscripcion extends javax.swing.JInternalFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jComboBox2 = new javax.swing.JComboBox<>();
+        comboMaterias = new javax.swing.JComboBox<>();
+        comboAlumnos = new javax.swing.JComboBox<>();
         btnInscribir = new javax.swing.JButton();
         btnSalirInscripcion = new javax.swing.JButton();
 
@@ -45,9 +45,7 @@ public class FormulariodeInscripcion extends javax.swing.JInternalFrame {
         jLabel3.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
         jLabel3.setText("Elija un Alumno:");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Las", "Materias", "Que", "Suban" }));
-
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Los", "Alumnos", "Que", "Suban" }));
+        comboMaterias.setSelectedIndex(-1);
 
         btnInscribir.setText("Inscribir");
         btnInscribir.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -76,8 +74,8 @@ public class FormulariodeInscripcion extends javax.swing.JInternalFrame {
                             .addComponent(jLabel3))
                         .addGap(29, 29, 29)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jComboBox2, 0, 150, Short.MAX_VALUE))
+                            .addComponent(comboMaterias, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(comboAlumnos, 0, 150, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)))
                 .addContainerGap(41, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
@@ -93,11 +91,11 @@ public class FormulariodeInscripcion extends javax.swing.JInternalFrame {
                 .addGap(40, 40, 40)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(comboMaterias, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(31, 31, 31)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(comboAlumnos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnInscribir)
@@ -117,8 +115,8 @@ public class FormulariodeInscripcion extends javax.swing.JInternalFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnInscribir;
     private javax.swing.JButton btnSalirInscripcion;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
+    private javax.swing.JComboBox<String> comboAlumnos;
+    private javax.swing.JComboBox<String> comboMaterias;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
