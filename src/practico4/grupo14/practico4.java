@@ -33,7 +33,7 @@ public class practico4 extends javax.swing.JFrame {
         VistaAlumnos = new javax.swing.JMenu();
         AgregarAlumno = new javax.swing.JMenuItem();
         EliminarAlumno = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
+        ModificarAlumno = new javax.swing.JMenuItem();
         VistaMaterias = new javax.swing.JMenu();
         AgregarMateria = new javax.swing.JMenuItem();
         EliminarMateria = new javax.swing.JMenuItem();
@@ -41,8 +41,9 @@ public class practico4 extends javax.swing.JFrame {
         VistaInscripcion = new javax.swing.JMenu();
         AgregarInscripcion = new javax.swing.JMenuItem();
         EliminarInscripcion = new javax.swing.JMenuItem();
-        jMenuItem3 = new javax.swing.JMenuItem();
+        ModificarInscripcion = new javax.swing.JMenuItem();
         Salir = new javax.swing.JMenu();
+        SalirDeTodo = new javax.swing.JMenuItem();
 
         jMenuItem1.setText("jMenuItem1");
 
@@ -78,13 +79,13 @@ public class practico4 extends javax.swing.JFrame {
         });
         VistaAlumnos.add(EliminarAlumno);
 
-        jMenuItem2.setText("Modificar Alumno");
-        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+        ModificarAlumno.setText("Modificar Alumno");
+        ModificarAlumno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem2ActionPerformed(evt);
+                ModificarAlumnoActionPerformed(evt);
             }
         });
-        VistaAlumnos.add(jMenuItem2);
+        VistaAlumnos.add(ModificarAlumno);
 
         jMenuBar1.add(VistaAlumnos);
 
@@ -124,12 +125,26 @@ public class practico4 extends javax.swing.JFrame {
         EliminarInscripcion.setText("Eliminar Inscripción");
         VistaInscripcion.add(EliminarInscripcion);
 
-        jMenuItem3.setText("Modificar Inscripción");
-        VistaInscripcion.add(jMenuItem3);
+        ModificarInscripcion.setText("Modificar Inscripción");
+        ModificarInscripcion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ModificarInscripcionActionPerformed(evt);
+            }
+        });
+        VistaInscripcion.add(ModificarInscripcion);
 
         jMenuBar1.add(VistaInscripcion);
 
         Salir.setText("Salir");
+
+        SalirDeTodo.setText("Salir");
+        SalirDeTodo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SalirDeTodoActionPerformed(evt);
+            }
+        });
+        Salir.add(SalirDeTodo);
+
         jMenuBar1.add(Salir);
 
         setJMenuBar(jMenuBar1);
@@ -173,9 +188,9 @@ public class practico4 extends javax.swing.JFrame {
         formularioFrame.setVisible(true);
     }//GEN-LAST:event_AgregarInscripcionActionPerformed
 
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+    private void ModificarAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificarAlumnoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
+    }//GEN-LAST:event_ModificarAlumnoActionPerformed
 
     private void EliminarAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EliminarAlumnoActionPerformed
         // TODO add your handling code here:
@@ -184,6 +199,15 @@ public class practico4 extends javax.swing.JFrame {
     private void ModificarMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificarMateriaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_ModificarMateriaActionPerformed
+
+    private void ModificarInscripcionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificarInscripcionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ModificarInscripcionActionPerformed
+
+    private void SalirDeTodoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirDeTodoActionPerformed
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_SalirDeTodoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -229,14 +253,15 @@ public class practico4 extends javax.swing.JFrame {
     private javax.swing.JMenuItem EliminarInscripcion;
     private javax.swing.JMenuItem EliminarMateria;
     private javax.swing.JDesktopPane Escritorio;
+    private javax.swing.JMenuItem ModificarAlumno;
+    private javax.swing.JMenuItem ModificarInscripcion;
     private javax.swing.JMenuItem ModificarMateria;
     private javax.swing.JMenu Salir;
+    private javax.swing.JMenuItem SalirDeTodo;
     private javax.swing.JMenu VistaAlumnos;
     private javax.swing.JMenu VistaInscripcion;
     private javax.swing.JMenu VistaMaterias;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
     // End of variables declaration//GEN-END:variables
 }
