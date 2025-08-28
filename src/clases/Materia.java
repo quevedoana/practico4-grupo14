@@ -1,6 +1,8 @@
 
 package clases;
 
+import java.util.Objects;
+
 
 public class Materia {
     protected int idMateria;
@@ -36,4 +38,32 @@ public class Materia {
     public void setAnio(int anio) {
         this.anio = anio;
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 59 * hash + this.idMateria;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Materia other = (Materia) obj;
+        if (this.idMateria != other.idMateria) {
+            return false;
+        }
+        return true;
+    }
+
+    
+    
 }
