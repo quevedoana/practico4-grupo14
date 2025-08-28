@@ -256,11 +256,11 @@ public class practico4 extends javax.swing.JFrame {
     private javax.swing.JMenuItem ModificarAlumno;
     private javax.swing.JMenuItem ModificarInscripcion;
     private javax.swing.JMenuItem ModificarMateria;
-    private javax.swing.JMenu Salir;
+    private static javax.swing.JMenu Salir;
     private javax.swing.JMenuItem SalirDeTodo;
-    private javax.swing.JMenu VistaAlumnos;
-    private javax.swing.JMenu VistaInscripcion;
-    private javax.swing.JMenu VistaMaterias;
+    private static javax.swing.JMenu VistaAlumnos;
+    private static javax.swing.JMenu VistaInscripcion;
+    private static javax.swing.JMenu VistaMaterias;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     // End of variables declaration//GEN-END:variables

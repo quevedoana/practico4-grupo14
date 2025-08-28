@@ -13,6 +13,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Alumno"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="10"/>
+          </AuxValues>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="AgregarAlumno">
               <Properties>
@@ -44,6 +47,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Materia"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="10"/>
+          </AuxValues>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="AgregarMateria">
               <Properties>
@@ -72,6 +78,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Registro"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="10"/>
+          </AuxValues>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="AgregarInscripcion">
               <Properties>
@@ -100,6 +109,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Salir"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="10"/>
+          </AuxValues>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="SalirDeTodo">
               <Properties>
