@@ -210,7 +210,11 @@ public class practico4 extends javax.swing.JFrame {
 
     private void VerAlumnosCargadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VerAlumnosCargadosActionPerformed
         // TODO add your handling code here:
-       
+       VerAlumnosAgregados verAlumnosFrame = new VerAlumnosAgregados();
+       verAlumnosFrame.setLocation((Escritorio.getWidth() - verAlumnosFrame.getWidth())/2,
+               (Escritorio.getHeight() - verAlumnosFrame.getHeight())/ 2);
+       Escritorio.add(verAlumnosFrame);
+       verAlumnosFrame.setVisible(true);
     }//GEN-LAST:event_VerAlumnosCargadosActionPerformed
 
     /**
