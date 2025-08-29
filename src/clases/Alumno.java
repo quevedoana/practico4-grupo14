@@ -21,6 +21,14 @@ public class Alumno {
         this.materias=new HashSet();
     }
 
+    public HashSet<Materia> getMaterias() {
+        return materias;
+    }
+
+    public void setMaterias(HashSet<Materia> materias) {
+        this.materias = materias;
+    }
+
     public int getLegajo() {
         return legajo;
     }

@@ -5,8 +5,10 @@
 package practico4.grupo14;
 //TURCO
 
+import clases.Alumno;
 import clases.Materia;
 import javax.swing.DefaultComboBoxModel;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -21,6 +23,7 @@ public class FormulariodeInscripcion extends javax.swing.JInternalFrame {
         initComponents();
         //comboMaterias.addItem("Materia") -> hacerlo en un for a medida que se cargen en la lista materias/alumnos
         cargarMaterias();
+        cargarAlumnos();
     }
 
     /**
@@ -38,13 +41,25 @@ public class FormulariodeInscripcion extends javax.swing.JInternalFrame {
             model.addElement("No hay materias cargadas");
         } else {
             for (Materia materia : practico4.listaMaterias) {
-                model.addElement(materia.getNombre());
+                model.addElement(materia.getIdMateria()+" - "+materia.getNombre());
             }
         }
         
         comboMaterias.setModel(model);
     }
-    
+    private void cargarAlumnos(){
+        DefaultComboBoxModel<String> model2=new DefaultComboBoxModel<>();
+        model2.addElement("Selecciones un alumno");
+        if (practico4.listaAlumnos.isEmpty()) {
+            model2.addElement("No hay alumnos cargados");
+        }else{
+            for (Alumno alumno : practico4.listaAlumnos) {
+                model2.addElement(alumno.getLegajo()+" - "+alumno.getNombre()+" "+alumno.getApellido());
+            }
+            
+        }
+        comboAlumnos.setModel(model2);
+    }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -159,9 +174,49 @@ public class FormulariodeInscripcion extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_btnInscribirActionPerformed
 
     private void btnInscribirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnInscribirMouseClicked
-        // TODO add your handling code here:
-       //agregar la materia a la lista de materias de un alumno
-       //borra los campos de texto
+        if (comboAlumnos.getSelectedIndex()<=0 || comboMaterias.getSelectedIndex()<=0) {
+            JOptionPane.showMessageDialog(this, "Debe selecccionar un alumno y una materia", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+        try{
+           
+            String alumnoSeleccionado=(String) comboAlumnos.getSelectedItem();
+            int legajoAlumno=Integer.parseInt(alumnoSeleccionado.split(" - ")[0]);
+            String materiaSeleccionada=(String) comboMaterias.getSelectedItem();
+            int codigoMateria=Integer.parseInt(materiaSeleccionada.split(" - ")[0]);
+            
+            Alumno alu=null;
+            for (Alumno a : practico4.listaAlumnos) {
+                if (a.getLegajo()==legajoAlumno) {
+                    alu=a;
+                    break;
+                }
+            }
+            Materia ma=null;
+            boolean inscripto=false;
+            for (Materia mate : practico4.listaMaterias) {
+                if (mate.getIdMateria()==codigoMateria) {
+                ma=mate;
+                break;
+                }
+            }
+            if (alu!=null && ma!=null) {
+                for (Materia m : alu.getMaterias()) {
+                    if (m.getIdMateria()==ma.getIdMateria()) {
+                        inscripto=true;
+                        break;
+                    }
+                }
+                if (inscripto) {
+                    JOptionPane.showMessageDialog(this, "El alumno "+alu.getNombre()+ " ya esta inscripto "+ma.getNombre(), "Atencion", JOptionPane.INFORMATION_MESSAGE);
+                }else{
+                    alu.agregarMateria(ma);
+                    JOptionPane.showMessageDialog(this, "El alumno "+alu.getNombre()+" se a inscripto en la materia "+ma.getNombre(), "Exito", JOptionPane.INFORMATION_MESSAGE);
+                }
+            }
+            
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(this, "Error en procesar la inscripcion"+e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_btnInscribirMouseClicked
 
 
