@@ -49,6 +49,9 @@ public class VerAlumnosAgregados extends javax.swing.JInternalFrame {
         jLabel1 = new javax.swing.JLabel();
         btnSalirAlumnosCargados = new javax.swing.JButton();
 
+        setTitle("Vista de Alumnos Cargados");
+
+        tablaAlumnosCargados.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         tablaAlumnosCargados.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
@@ -60,9 +63,16 @@ public class VerAlumnosAgregados extends javax.swing.JInternalFrame {
                 "Legajo", "Apellido", "Nombre"
             }
         ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class
+            };
             boolean[] canEdit = new boolean [] {
                 false, false, false
             };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
                 return canEdit [columnIndex];
@@ -70,7 +80,7 @@ public class VerAlumnosAgregados extends javax.swing.JInternalFrame {
         });
         jScrollPane1.setViewportView(tablaAlumnosCargados);
 
-        jLabel1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel1.setText("Alumnos Cargados");
 
         btnSalirAlumnosCargados.setText("Salir");
@@ -91,23 +101,23 @@ public class VerAlumnosAgregados extends javax.swing.JInternalFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(111, 111, 111)
+                        .addGap(120, 120, 120)
                         .addComponent(jLabel1))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(153, 153, 153)
+                        .addGap(154, 154, 154)
                         .addComponent(btnSalirAlumnosCargados, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(39, 39, 39)
+                .addGap(17, 17, 17)
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 168, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnSalirAlumnosCargados)
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addGap(14, 14, 14))
         );
 
         pack();

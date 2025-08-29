@@ -180,7 +180,7 @@ public class FormulariodeInscripcion extends javax.swing.JInternalFrame {
         try{
            
             String alumnoSeleccionado=(String) comboAlumnos.getSelectedItem();
-            int legajoAlumno=Integer.parseInt(alumnoSeleccionado.split(" - ")[0]);
+            int legajoAlumno=Integer.parseInt(alumnoSeleccionado.split(" - ")[0]); //Acceder a los valores del combo box hecho como arreglo separado por -
             String materiaSeleccionada=(String) comboMaterias.getSelectedItem();
             int codigoMateria=Integer.parseInt(materiaSeleccionada.split(" - ")[0]);
             
@@ -207,15 +207,18 @@ public class FormulariodeInscripcion extends javax.swing.JInternalFrame {
                     }
                 }
                 if (inscripto) {
-                    JOptionPane.showMessageDialog(this, "El alumno "+alu.getNombre()+ " ya esta inscripto "+ma.getNombre(), "Atencion", JOptionPane.INFORMATION_MESSAGE);
+                    JOptionPane.showMessageDialog(this, "El alumno "+alu.getNombre()+ " "+alu.getApellido()+" ya estaba inscripto a "+ma.getNombre(), "Informacion", JOptionPane.INFORMATION_MESSAGE);
                 }else{
                     alu.agregarMateria(ma);
-                    JOptionPane.showMessageDialog(this, "El alumno "+alu.getNombre()+" se a inscripto en la materia "+ma.getNombre(), "Exito", JOptionPane.INFORMATION_MESSAGE);
+                    JOptionPane.showMessageDialog(this, "El alumno "+alu.getNombre()+" "+alu.getApellido()+" se a inscripto en la materia "+ma.getNombre(), "Exito", JOptionPane.INFORMATION_MESSAGE);
                 }
             }
+                    // Limpiar seleccion
+                    comboMaterias.setSelectedIndex(0);
+                    comboAlumnos.setSelectedIndex(0);
             
         }catch(Exception e){
-            JOptionPane.showMessageDialog(this, "Error en procesar la inscripcion"+e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Error en procesar la inscripcion ", "Error", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_btnInscribirMouseClicked
 

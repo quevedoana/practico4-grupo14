@@ -24,27 +24,9 @@ public class practico4 extends javax.swing.JFrame {
 
     public practico4() {
         initComponents();
-        crearMateriasIniciales();
-        crearAlumnosIniciales();
+        //Esteban -> tenes que crear las materias, los alumnoss, inscribirlos y eso, iniciandolos como lo pide en el practico
     }
-
-    private void crearMateriasIniciales() {
-        // 1. Crear las materias: Web 2 (2do), Matematicas (1ro), Laboratorio 1 (1ro)
-        Materia web2 = new Materia(1, "Web 2", 2);
-        Materia matematicas = new Materia(2, "Matematicas", 1);
-        Materia lab1 = new Materia(3, "Laboratorio 1", 1);
-
-        listaMaterias.add(web2);
-        listaMaterias.add(matematicas);
-        listaMaterias.add(lab1);
-    }
-    //crea Alumnos
-    private void crearAlumnosIniciales(){
-        Alumno alu1=new Alumno(1001,"Lopez","Martin");
-        Alumno alu2=new Alumno(1002,"Martinez","Brenda");
-        listaAlumnos.add(alu1);
-        listaAlumnos.add(alu2);
-    }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
