@@ -32,7 +32,7 @@ public class FormulariodeInscripcion extends javax.swing.JInternalFrame {
     // Cargar materias en el ComboBox
     private void cargarMaterias() {
         DefaultComboBoxModel<String> model = new DefaultComboBoxModel<>();
-        model.addElement("Seleccione una materia"); // Elemento por defecto
+        model.addElement("Seleccione una materia"); // por defecto
         
         if (practico4.listaMaterias.isEmpty()) {
             model.addElement("No hay materias cargadas");
