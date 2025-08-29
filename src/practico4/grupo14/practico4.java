@@ -9,6 +9,7 @@ import clases.*;
 import java.util.HashSet;
 //ESTEBAN -> MAIN
 //TOTO -> ESTETICA, ICONOS 
+
 /**
  *
  * @author Candela Naranjo
@@ -18,11 +19,45 @@ public class practico4 extends javax.swing.JFrame {
     /**
      * Creates new form practico4
      */
+    public static HashSet<Alumno> listaAlumnos = new HashSet();
+    public static HashSet<Materia> listaMaterias = new HashSet();
+
     public practico4() {
         initComponents();
-        //MAIN ESTEBAN
-        HashSet <Alumno> listaAlumnos = new HashSet();
-        HashSet <Materia> listaMaterias = new HashSet();
+        //crearMateriasIniciales();
+    }
+
+    /*private void crearMateriasIniciales() {
+        // 1. Crear las materias: Web 2 (2do), Matemáticas (1ro), Laboratorio 1 (1ro)
+        Materia web2 = new Materia(1, "Web 2", 2);
+        Materia matematicas = new Materia(2, "Matematicas", 1);
+        Materia lab1 = new Materia(3, "Laboratorio 1", 1);
+
+        listaMaterias.add(web2);
+        listaMaterias.add(matematicas);
+        listaMaterias.add(lab1);
+
+        // 2. Crear 2 alumnos
+        Alumno lopez = new Alumno(1001, "Lopez", "Martin");
+        Alumno martinez = new Alumno(1002, "Martinez", "Brenda");
+
+        listaAlumnos.add(lopez);
+        listaAlumnos.add(martinez);
+
+        // 3. Inscribir a López en las 3 materias
+        lopez.agregarMateria(web2);
+        lopez.agregarMateria(matematicas);
+        lopez.agregarMateria(lab1);
+
+        // 4. Inscribir a Martínez en las 3 materias y volver a inscribirlo en Laboratorio 1
+        martinez.agregarMateria(web2);
+        martinez.agregarMateria(matematicas);
+        martinez.agregarMateria(lab1);
+        martinez.agregarMateria(lab1); // Esta no debería agregarse por ser duplicada
+
+        // 5. Visualizar cantidad de materias de cada alumno
+        System.out.println("Lopez tiene " + lopez.cantidadMaterias() + " materias");
+        System.out.println("Martinez tiene " + martinez.cantidadMaterias() + " materias");
     }
 
     /**
@@ -43,6 +78,7 @@ public class practico4 extends javax.swing.JFrame {
         AgregarAlumno = new javax.swing.JMenuItem();
         VistaMaterias = new javax.swing.JMenu();
         AgregarMateria = new javax.swing.JMenuItem();
+        VerMateriasCargadas = new javax.swing.JMenuItem();
         VistaInscripcion = new javax.swing.JMenu();
         AgregarInscripcion = new javax.swing.JMenuItem();
         Salir = new javax.swing.JMenu();
@@ -87,6 +123,14 @@ public class practico4 extends javax.swing.JFrame {
             }
         });
         VistaMaterias.add(AgregarMateria);
+
+        VerMateriasCargadas.setText("Ver Materias Cargadas");
+        VerMateriasCargadas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                VerMateriasCargadasActionPerformed(evt);
+            }
+        });
+        VistaMaterias.add(VerMateriasCargadas);
 
         jMenuBar1.add(VistaMaterias);
 
@@ -134,7 +178,7 @@ public class practico4 extends javax.swing.JFrame {
     private void AgregarMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AgregarMateriaActionPerformed
         // TODO add your handling code here:
         AltadeMaterias materiaFrame = new AltadeMaterias();
-        materiaFrame.setLocation((Escritorio.getWidth() - materiaFrame.getWidth()) / 2,(Escritorio.getHeight() - materiaFrame.getHeight()) / 2);
+        materiaFrame.setLocation((Escritorio.getWidth() - materiaFrame.getWidth()) / 2, (Escritorio.getHeight() - materiaFrame.getHeight()) / 2);
         Escritorio.add(materiaFrame);
         materiaFrame.setVisible(true);
     }//GEN-LAST:event_AgregarMateriaActionPerformed
@@ -142,7 +186,7 @@ public class practico4 extends javax.swing.JFrame {
     private void AgregarAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AgregarAlumnoActionPerformed
         // TODO add your handling code here:
         AltadeAlumnos alumnoFrame = new AltadeAlumnos();
-        alumnoFrame.setLocation((Escritorio.getWidth() - alumnoFrame.getWidth()) / 2,(Escritorio.getHeight() - alumnoFrame.getHeight()) / 2);
+        alumnoFrame.setLocation((Escritorio.getWidth() - alumnoFrame.getWidth()) / 2, (Escritorio.getHeight() - alumnoFrame.getHeight()) / 2);
         Escritorio.add(alumnoFrame);
         alumnoFrame.setVisible(true);
     }//GEN-LAST:event_AgregarAlumnoActionPerformed
@@ -150,7 +194,7 @@ public class practico4 extends javax.swing.JFrame {
     private void AgregarInscripcionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AgregarInscripcionActionPerformed
         // TODO add your handling code here:
         FormulariodeInscripcion formularioFrame = new FormulariodeInscripcion();
-        formularioFrame.setLocation((Escritorio.getWidth() - formularioFrame.getWidth()) / 2,(Escritorio.getHeight() - formularioFrame.getHeight()) / 2);
+        formularioFrame.setLocation((Escritorio.getWidth() - formularioFrame.getWidth()) / 2, (Escritorio.getHeight() - formularioFrame.getHeight()) / 2);
         Escritorio.add(formularioFrame);
         formularioFrame.setVisible(true);
     }//GEN-LAST:event_AgregarInscripcionActionPerformed
@@ -159,6 +203,15 @@ public class practico4 extends javax.swing.JFrame {
         // TODO add your handling code here:
         System.exit(0);
     }//GEN-LAST:event_SalirDeTodoActionPerformed
+
+    private void VerMateriasCargadasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VerMateriasCargadasActionPerformed
+        // TODO add your handling code here:
+        VerMateriasCargadas verMateriasFrame = new VerMateriasCargadas();
+        verMateriasFrame.setLocation((Escritorio.getWidth() - verMateriasFrame.getWidth()) / 2,
+                (Escritorio.getHeight() - verMateriasFrame.getHeight()) / 2);
+        Escritorio.add(verMateriasFrame);
+        verMateriasFrame.setVisible(true);
+    }//GEN-LAST:event_VerMateriasCargadasActionPerformed
 
     /**
      * @param args the command line arguments
@@ -191,7 +244,7 @@ public class practico4 extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new practico4().setVisible(true);
-                
+
             }
         });
     }
@@ -203,6 +256,7 @@ public class practico4 extends javax.swing.JFrame {
     private javax.swing.JDesktopPane Escritorio;
     private static javax.swing.JMenu Salir;
     private javax.swing.JMenuItem SalirDeTodo;
+    private javax.swing.JMenuItem VerMateriasCargadas;
     private static javax.swing.JMenu VistaAlumnos;
     private static javax.swing.JMenu VistaInscripcion;
     private static javax.swing.JMenu VistaMaterias;
