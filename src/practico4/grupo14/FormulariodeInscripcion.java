@@ -37,13 +37,13 @@ public class FormulariodeInscripcion extends javax.swing.JInternalFrame {
 
         setTitle("Formulario Inscripción");
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI Variable", 1, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabel1.setText("Formulario de Inscripción");
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel2.setText("ElIja una Materia:");
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel3.setText("Elija un Alumno:");
 
         comboMaterias.setSelectedIndex(-1);
@@ -93,7 +93,7 @@ public class FormulariodeInscripcion extends javax.swing.JInternalFrame {
                         .addComponent(btnInscribir)
                         .addGap(51, 51, 51)
                         .addComponent(btnSalirInscripcion)))
-                .addContainerGap(59, Short.MAX_VALUE))
+                .addContainerGap(55, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jLabel1)
@@ -112,7 +112,7 @@ public class FormulariodeInscripcion extends javax.swing.JInternalFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(comboAlumnos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnInscribir)
                     .addComponent(btnSalirInscripcion))
