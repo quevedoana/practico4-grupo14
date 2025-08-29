@@ -54,6 +54,7 @@ public class practico4 extends javax.swing.JFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         VistaAlumnos = new javax.swing.JMenu();
         AgregarAlumno = new javax.swing.JMenuItem();
+        VerAlumnosCargados = new javax.swing.JMenuItem();
         VistaMaterias = new javax.swing.JMenu();
         AgregarMateria = new javax.swing.JMenuItem();
         VerMateriasCargadas = new javax.swing.JMenuItem();
@@ -89,6 +90,14 @@ public class practico4 extends javax.swing.JFrame {
             }
         });
         VistaAlumnos.add(AgregarAlumno);
+
+        VerAlumnosCargados.setText("Ver Alumnos Cargados");
+        VerAlumnosCargados.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                VerAlumnosCargadosActionPerformed(evt);
+            }
+        });
+        VistaAlumnos.add(VerAlumnosCargados);
 
         jMenuBar1.add(VistaAlumnos);
 
@@ -191,6 +200,11 @@ public class practico4 extends javax.swing.JFrame {
         verMateriasFrame.setVisible(true);
     }//GEN-LAST:event_VerMateriasCargadasActionPerformed
 
+    private void VerAlumnosCargadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VerAlumnosCargadosActionPerformed
+        // TODO add your handling code here:
+       
+    }//GEN-LAST:event_VerAlumnosCargadosActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -234,6 +248,7 @@ public class practico4 extends javax.swing.JFrame {
     private javax.swing.JDesktopPane Escritorio;
     private static javax.swing.JMenu Salir;
     private javax.swing.JMenuItem SalirDeTodo;
+    private javax.swing.JMenuItem VerAlumnosCargados;
     private javax.swing.JMenuItem VerMateriasCargadas;
     private static javax.swing.JMenu VistaAlumnos;
     private static javax.swing.JMenu VistaInscripcion;

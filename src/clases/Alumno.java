@@ -2,6 +2,7 @@
 package clases;
 
 import java.util.HashSet;
+import java.util.Objects;
 
 /**
  *
@@ -51,6 +52,23 @@ public class Alumno {
    public int cantidadMaterias(){
        return materias.size();
    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(legajo);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+          if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Alumno alumno = (Alumno) obj;
+        return legajo == alumno.legajo;
+    }
+
+    
+   
+   
     
     
 }

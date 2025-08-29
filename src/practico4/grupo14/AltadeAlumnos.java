@@ -4,6 +4,10 @@
  */
 package practico4.grupo14;
 //ANA
+
+import clases.Alumno;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Candela Naranjo
@@ -26,60 +30,41 @@ public class AltadeAlumnos extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        lblTituloFormularioAlumnos = new javax.swing.JLabel();
+        lblNombre = new javax.swing.JLabel();
+        lblApellido = new javax.swing.JLabel();
+        lblLegajo = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        textoLegajo = new javax.swing.JTextPane();
+        txtLegajo = new javax.swing.JTextPane();
         jScrollPane2 = new javax.swing.JScrollPane();
-        textoNombre = new javax.swing.JTextPane();
+        txtNombre = new javax.swing.JTextPane();
         jScrollPane3 = new javax.swing.JScrollPane();
-        textoApellido = new javax.swing.JTextPane();
-        btnGuardarAlumno = new javax.swing.JButton();
+        txtApellido = new javax.swing.JTextPane();
         btnNuevoAlumno = new javax.swing.JButton();
         btnSalirAlumno = new javax.swing.JButton();
-        btnBuscarAlumno = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setTitle("Formulario Alumnos");
 
-        jLabel1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jLabel1.setText("Formulario de Alumnos");
+        lblTituloFormularioAlumnos.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        lblTituloFormularioAlumnos.setText("Formulario de Alumnos");
 
-        jLabel2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel2.setText("Nombre:");
+        lblNombre.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        lblNombre.setText("Nombre:");
 
-        jLabel3.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel3.setText("Apellido:");
+        lblApellido.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        lblApellido.setText("Apellido:");
 
-        jLabel4.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel4.setText("Legajo:");
+        lblLegajo.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        lblLegajo.setText("Legajo:");
 
-        jScrollPane1.setViewportView(textoLegajo);
+        jScrollPane1.setViewportView(txtLegajo);
 
-        jScrollPane2.setViewportView(textoNombre);
+        jScrollPane2.setViewportView(txtNombre);
 
-        jScrollPane3.setViewportView(textoApellido);
+        jScrollPane3.setViewportView(txtApellido);
 
-        btnGuardarAlumno.setText("Guardar Alumno");
-        btnGuardarAlumno.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnGuardarAlumnoMouseClicked(evt);
-            }
-        });
-        btnGuardarAlumno.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnGuardarAlumnoActionPerformed(evt);
-            }
-        });
-        btnGuardarAlumno.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                btnGuardarAlumnoKeyTyped(evt);
-            }
-        });
-
-        btnNuevoAlumno.setText("Nuevo Alumno");
+        btnNuevoAlumno.setText("Cargar Alumno");
         btnNuevoAlumno.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnNuevoAlumnoMouseClicked(evt);
@@ -98,79 +83,57 @@ public class AltadeAlumnos extends javax.swing.JInternalFrame {
             }
         });
 
-        btnBuscarAlumno.setText("Buscar Alumno");
-        btnBuscarAlumno.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnBuscarAlumnoMouseClicked(evt);
-            }
-        });
-        btnBuscarAlumno.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBuscarAlumnoActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(27, 27, 27)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(27, 27, 27)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel3)
-                                .addGap(18, 18, 18)
-                                .addComponent(jScrollPane3))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(btnSalirAlumno)
-                                .addGap(95, 95, 95))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel2)
-                                    .addComponent(jLabel4))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel1)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 236, Short.MAX_VALUE)
-                                        .addComponent(jScrollPane2))))))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lblNombre)
+                            .addComponent(lblLegajo))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblTituloFormularioAlumnos)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 236, Short.MAX_VALUE)
+                                .addComponent(jScrollPane2))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(15, 15, 15)
-                        .addComponent(btnNuevoAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btnGuardarAlumno)
-                        .addGap(12, 12, 12)
-                        .addComponent(btnBuscarAlumno)))
-                .addContainerGap(14, Short.MAX_VALUE))
+                        .addComponent(lblApellido)
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(btnNuevoAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnSalirAlumno))
+                            .addComponent(jScrollPane3))))
+                .addContainerGap(76, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(32, 32, 32)
-                .addComponent(jLabel1)
+                .addComponent(lblTituloFormularioAlumnos)
                 .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel4)
+                            .addComponent(lblLegajo)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel2))
+                        .addComponent(lblNombre))
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel3)
+                    .addComponent(lblApellido)
                     .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
+                .addGap(41, 41, 41)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnGuardarAlumno)
-                    .addComponent(btnBuscarAlumno)
+                    .addComponent(btnSalirAlumno)
                     .addComponent(btnNuevoAlumno))
-                .addGap(18, 18, 18)
-                .addComponent(btnSalirAlumno)
-                .addGap(14, 14, 14))
+                .addContainerGap(56, Short.MAX_VALUE))
         );
 
         pack();
@@ -181,57 +144,42 @@ public class AltadeAlumnos extends javax.swing.JInternalFrame {
         this.dispose();
     }//GEN-LAST:event_btnSalirAlumnoActionPerformed
 
-    private void btnGuardarAlumnoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btnGuardarAlumnoKeyTyped
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnGuardarAlumnoKeyTyped
-
     private void btnNuevoAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNuevoAlumnoActionPerformed
         // TODO add your handling code here:
-       
+
     }//GEN-LAST:event_btnNuevoAlumnoActionPerformed
-
-    private void btnBuscarAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarAlumnoActionPerformed
-        // TODO add your handling code here:
-       
-    }//GEN-LAST:event_btnBuscarAlumnoActionPerformed
-
-    private void btnGuardarAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarAlumnoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnGuardarAlumnoActionPerformed
 
     private void btnNuevoAlumnoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnNuevoAlumnoMouseClicked
         // ANA PAULA
-        //cargar el alumuno a la lista
-        //mostrar un dialogo que diga que el elumno fue cargado correctamente
-        //que se borren los campos de texto una vez qaue ya se cargo
+        //carga el alumno a la lista
+        try {
+            int legajo = Integer.parseInt(txtLegajo.getText());
+            Alumno a = new Alumno(legajo, txtApellido.getText(), txtNombre.getText());
+            if (practico4.listaAlumnos.add(a)) {
+                JOptionPane.showMessageDialog(this, "alumno cargado correctamente");
+            } else {
+                JOptionPane.showMessageDialog(this, "Error: Ya existe un alumno con ese legajo", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+            txtLegajo.setText("");
+            txtApellido.setText("");
+            txtNombre.setText("");
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(this, "tipo de dato ingresado invalido", "ADVERTENCIA", JOptionPane.ERROR_MESSAGE);
     }//GEN-LAST:event_btnNuevoAlumnoMouseClicked
-
-    private void btnGuardarAlumnoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnGuardarAlumnoMouseClicked
-        // TODO add your handling code here:
-        //modificar los campos del alumno
-        //que se borren los campos de texto una vez qaue ya se cargo
-    }//GEN-LAST:event_btnGuardarAlumnoMouseClicked
-
-    private void btnBuscarAlumnoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBuscarAlumnoMouseClicked
-        // TODO add your handling code here:
-         //mostrar un dialogo que diga a cuantas materias se inscribio el alumno
-    }//GEN-LAST:event_btnBuscarAlumnoMouseClicked
-
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnBuscarAlumno;
-    private javax.swing.JButton btnGuardarAlumno;
     private javax.swing.JButton btnNuevoAlumno;
     private javax.swing.JButton btnSalirAlumno;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JTextPane textoApellido;
-    private javax.swing.JTextPane textoLegajo;
-    private javax.swing.JTextPane textoNombre;
+    private javax.swing.JLabel lblApellido;
+    private javax.swing.JLabel lblLegajo;
+    private javax.swing.JLabel lblNombre;
+    private javax.swing.JLabel lblTituloFormularioAlumnos;
+    private javax.swing.JTextPane txtApellido;
+    private javax.swing.JTextPane txtLegajo;
+    private javax.swing.JTextPane txtNombre;
     // End of variables declaration//GEN-END:variables
 }
