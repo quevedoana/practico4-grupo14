@@ -28,7 +28,7 @@ public class practico4 extends javax.swing.JFrame {
     }
 
     /*private void crearMateriasIniciales() {
-        // 1. Crear las materias: Web 2 (2do), Matemáticas (1ro), Laboratorio 1 (1ro)
+        // 1. Crear las materias: Web 2 (2do), Matematicas (1ro), Laboratorio 1 (1ro)
         Materia web2 = new Materia(1, "Web 2", 2);
         Materia matematicas = new Materia(2, "Matematicas", 1);
         Materia lab1 = new Materia(3, "Laboratorio 1", 1);
@@ -36,28 +36,6 @@ public class practico4 extends javax.swing.JFrame {
         listaMaterias.add(web2);
         listaMaterias.add(matematicas);
         listaMaterias.add(lab1);
-
-        // 2. Crear 2 alumnos
-        Alumno lopez = new Alumno(1001, "Lopez", "Martin");
-        Alumno martinez = new Alumno(1002, "Martinez", "Brenda");
-
-        listaAlumnos.add(lopez);
-        listaAlumnos.add(martinez);
-
-        // 3. Inscribir a López en las 3 materias
-        lopez.agregarMateria(web2);
-        lopez.agregarMateria(matematicas);
-        lopez.agregarMateria(lab1);
-
-        // 4. Inscribir a Martínez en las 3 materias y volver a inscribirlo en Laboratorio 1
-        martinez.agregarMateria(web2);
-        martinez.agregarMateria(matematicas);
-        martinez.agregarMateria(lab1);
-        martinez.agregarMateria(lab1); // Esta no debería agregarse por ser duplicada
-
-        // 5. Visualizar cantidad de materias de cada alumno
-        System.out.println("Lopez tiene " + lopez.cantidadMaterias() + " materias");
-        System.out.println("Martinez tiene " + martinez.cantidadMaterias() + " materias");
     }
 
     /**

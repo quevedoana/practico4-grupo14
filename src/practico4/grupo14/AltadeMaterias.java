@@ -22,12 +22,6 @@ public class AltadeMaterias extends javax.swing.JInternalFrame {
         initComponents();
     }
 
-    
-    private void limpiarCampos() {
-        textoCodigoMateria.setText("");
-        textoNombreMateria.setText("");
-        textoAñoPertenece.setText("");
-    }
 
 
     /**
@@ -164,7 +158,7 @@ public class AltadeMaterias extends javax.swing.JInternalFrame {
             String nombre = textoNombreMateria.getText();
             int año = Integer.parseInt(textoAñoPertenece.getText());
             
-            // Verificar si el código ya existe
+            // Verificar si el codigo ya existe
             boolean existe = false;
             for (Materia m : practico4.listaMaterias) {
                 if (m.getIdMateria() == codigo) {
@@ -178,10 +172,10 @@ public class AltadeMaterias extends javax.swing.JInternalFrame {
             } else {
                 Materia nuevaMateria = new Materia(codigo, nombre, año);
                 practico4.listaMaterias.add(nuevaMateria);
-                
+                //mostrar un dialogo que diga que la materia fue cargado correctamente
                 JOptionPane.showMessageDialog(this, "Materia agregada correctamente", "Exito", JOptionPane.INFORMATION_MESSAGE);
                 
-                // Limpiar campos
+                 //que se borren los campos de texto una vez qaue ya se cargo
                 textoCodigoMateria.setText("");
                 textoNombreMateria.setText("");
                 textoAñoPertenece.setText("");
@@ -189,9 +183,7 @@ public class AltadeMaterias extends javax.swing.JInternalFrame {
         } catch (NumberFormatException e) {
             JOptionPane.showMessageDialog(this, "Error: Codigo y año deben ser números validos", "Error", JOptionPane.ERROR_MESSAGE);
         }
-        //mostrar un dialogo que diga que la materia fue cargado correctamente
-        //que se borren los campos de texto una vez qaue ya se cargo
-        limpiarCampos();
+
     }//GEN-LAST:event_btnNuevoMateriaMouseClicked
 
 

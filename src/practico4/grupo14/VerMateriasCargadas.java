@@ -24,7 +24,7 @@ public class VerMateriasCargadas extends javax.swing.JInternalFrame {
 
     private void cargarMaterias() {
        DefaultTableModel model = (DefaultTableModel) tablaMaterias.getModel();
-        model.setRowCount(0); // Limpiar tabla existente
+        model.setRowCount(0); // limpiar tabla 
 
         if (practico4.listaMaterias.isEmpty()) {
             JOptionPane.showMessageDialog(this, "No hay materias cargadas en el sistema.", "Informacion", JOptionPane.INFORMATION_MESSAGE);
