@@ -156,7 +156,7 @@ public class AltadeAlumnos extends javax.swing.JInternalFrame {
             int legajo = Integer.parseInt(txtLegajo.getText());
             Alumno a = new Alumno(legajo, txtApellido.getText(), txtNombre.getText());
             if (practico4.listaAlumnos.add(a)) {
-                JOptionPane.showMessageDialog(this, "alumno cargado correctamente");
+                JOptionPane.showMessageDialog(this, "Alumno cargado correctamente");
             } else {
                 JOptionPane.showMessageDialog(this, "Error: Ya existe un alumno con ese legajo", "Error", JOptionPane.ERROR_MESSAGE);
             }
@@ -164,7 +164,7 @@ public class AltadeAlumnos extends javax.swing.JInternalFrame {
             txtApellido.setText("");
             txtNombre.setText("");
         } catch (NumberFormatException e) {
-            JOptionPane.showMessageDialog(this, "tipo de dato ingresado invalido", "ADVERTENCIA", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Tipo de dato ingresado invalido", "ADVERTENCIA", JOptionPane.ERROR_MESSAGE);
     }//GEN-LAST:event_btnNuevoAlumnoMouseClicked
     }
 

@@ -16,6 +16,8 @@ import javax.swing.JOptionPane;
  */
 public class FormulariodeInscripcion extends javax.swing.JInternalFrame {
 
+    private String materiaSeleccionada;
+    private int alumnoSelecciondo;
     /**
      * Creates new form FormulariodeInscripcion
      */
@@ -41,7 +43,7 @@ public class FormulariodeInscripcion extends javax.swing.JInternalFrame {
             model.addElement("No hay materias cargadas");
         } else {
             for (Materia materia : practico4.listaMaterias) {
-                model.addElement(materia.getIdMateria()+" - "+materia.getNombre());
+                model.addElement(materia.getNombre());
             }
         }
         
@@ -181,8 +183,8 @@ public class FormulariodeInscripcion extends javax.swing.JInternalFrame {
            
             String alumnoSeleccionado=(String) comboAlumnos.getSelectedItem();
             int legajoAlumno=Integer.parseInt(alumnoSeleccionado.split(" - ")[0]); //Acceder a los valores del combo box hecho como arreglo separado por -
-            String materiaSeleccionada=(String) comboMaterias.getSelectedItem();
-            int codigoMateria=Integer.parseInt(materiaSeleccionada.split(" - ")[0]);
+            materiaSeleccionada=(String) comboMaterias.getSelectedItem();
+            
             
             Alumno alu=null;
             for (Alumno a : practico4.listaAlumnos) {
@@ -194,13 +196,13 @@ public class FormulariodeInscripcion extends javax.swing.JInternalFrame {
             Materia ma=null;
             boolean inscripto=false;
             for (Materia mate : practico4.listaMaterias) {
-                if (mate.getIdMateria()==codigoMateria) {
+                if (mate.getNombre().equals(materiaSeleccionada)) {
                 ma=mate;
                 break;
                 }
             }
-            if (alu!=null && ma!=null) {
-                for (Materia m : alu.getMaterias()) {
+            if (alu!=null && ma!=null) { //verifica si el alumno y la materia estaban en la lista
+                for (Materia m : alu.getMaterias()) {   //verifica si el alumno ya estaba o no inscripto en la materia
                     if (m.getIdMateria()==ma.getIdMateria()) {
                         inscripto=true;
                         break;

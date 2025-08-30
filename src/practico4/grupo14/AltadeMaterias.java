@@ -17,12 +17,9 @@ public class AltadeMaterias extends javax.swing.JInternalFrame {
     /**
      * Creates new form AltadeMaterias
      */
-
     public AltadeMaterias() {
         initComponents();
     }
-
-
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -152,12 +149,12 @@ public class AltadeMaterias extends javax.swing.JInternalFrame {
 
     private void btnNuevoMateriaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnNuevoMateriaMouseClicked
         // CANDE
-        //cargar la materia a la lista
-         try {
+
+        try {
             int codigo = Integer.parseInt(textoCodigoMateria.getText());
             String nombre = textoNombreMateria.getText();
             int año = Integer.parseInt(textoAñoPertenece.getText());
-            
+
             // Verificar si el codigo ya existe
             boolean existe = false;
             for (Materia m : practico4.listaMaterias) {
@@ -166,7 +163,7 @@ public class AltadeMaterias extends javax.swing.JInternalFrame {
                     break;
                 }
             }
-            
+
             if (existe) {
                 JOptionPane.showMessageDialog(this, "Error: Ya existe una materia con ese codigo", "Error", JOptionPane.ERROR_MESSAGE);
             } else {
@@ -174,14 +171,14 @@ public class AltadeMaterias extends javax.swing.JInternalFrame {
                 practico4.listaMaterias.add(nuevaMateria);
                 //mostrar un dialogo que diga que la materia fue cargado correctamente
                 JOptionPane.showMessageDialog(this, "Materia agregada correctamente", "Exito", JOptionPane.INFORMATION_MESSAGE);
-                
-                 //que se borren los campos de texto una vez qaue ya se cargo
+
+                //que se borren los campos de texto una vez qaue ya se cargo
                 textoCodigoMateria.setText("");
                 textoNombreMateria.setText("");
                 textoAñoPertenece.setText("");
             }
         } catch (NumberFormatException e) {
-            JOptionPane.showMessageDialog(this, "Error: Codigo y año deben ser números validos", "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Error: Codigo y año deben ser numeros validos", "Error", JOptionPane.ERROR_MESSAGE);
         }
 
     }//GEN-LAST:event_btnNuevoMateriaMouseClicked
