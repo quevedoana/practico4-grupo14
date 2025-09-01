@@ -25,6 +25,29 @@ public class practico4 extends javax.swing.JFrame {
     public practico4() {
         initComponents();
         //Esteban -> tenes que crear las materias, los alumnoss, inscribirlos y eso, iniciandolos como lo pide en el practico
+        //Materias
+        Materia web = new Materia(23445,"Web 2",2);
+        Materia mat = new Materia(23446,"Matematicas",1);
+        Materia lab = new Materia(23447,"Laboratorio 1",1);
+        //Alumnos
+        Alumno n1 = new Alumno(1001,"Lopez","Martin");
+        Alumno n2 = new Alumno(1002,"Martinez","Brenda");
+        
+        
+        listaAlumnos.add(n1);
+        listaAlumnos.add(n2);
+        
+        listaMaterias.add(web);
+        listaMaterias.add(mat);
+        listaMaterias.add(lab);
+       
+       
+      
+       
+               
+
+                
+        
     }
     
 
