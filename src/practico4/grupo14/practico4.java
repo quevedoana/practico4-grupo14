@@ -94,6 +94,7 @@ public class practico4 extends javax.swing.JFrame {
             .addGap(0, 408, Short.MAX_VALUE)
         );
 
+        VistaAlumnos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/usuario (1).png"))); // NOI18N
         VistaAlumnos.setText("Alumno");
 
         AgregarAlumno.setText("Agregar Alumno");
@@ -114,6 +115,7 @@ public class practico4 extends javax.swing.JFrame {
 
         jMenuBar1.add(VistaAlumnos);
 
+        VistaMaterias.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/archivo (3).png"))); // NOI18N
         VistaMaterias.setText("Materia");
 
         AgregarMateria.setText("Agregar Materia");
@@ -134,6 +136,7 @@ public class practico4 extends javax.swing.JFrame {
 
         jMenuBar1.add(VistaMaterias);
 
+        VistaInscripcion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/archivo (2).png"))); // NOI18N
         VistaInscripcion.setText("Registro");
 
         AgregarInscripcion.setText("Agregar Inscripción");
@@ -146,6 +149,7 @@ public class practico4 extends javax.swing.JFrame {
 
         jMenuBar1.add(VistaInscripcion);
 
+        Salir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/error.png"))); // NOI18N
         Salir.setText("Salir");
 
         SalirDeTodo.setText("Salir");

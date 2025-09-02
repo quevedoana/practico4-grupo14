@@ -22,6 +22,9 @@
       <SubComponents>
         <Menu class="javax.swing.JMenu" name="VistaAlumnos">
           <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/img/usuario (1).png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Alumno"/>
           </Properties>
           <AuxValues>
@@ -48,6 +51,9 @@
         </Menu>
         <Menu class="javax.swing.JMenu" name="VistaMaterias">
           <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/img/archivo (3).png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Materia"/>
           </Properties>
           <AuxValues>
@@ -74,6 +80,9 @@
         </Menu>
         <Menu class="javax.swing.JMenu" name="VistaInscripcion">
           <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/img/archivo (2).png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Registro"/>
           </Properties>
           <AuxValues>
@@ -92,6 +101,9 @@
         </Menu>
         <Menu class="javax.swing.JMenu" name="Salir">
           <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/img/error.png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Salir"/>
           </Properties>
           <AuxValues>
