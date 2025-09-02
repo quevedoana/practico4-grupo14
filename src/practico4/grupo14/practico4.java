@@ -40,6 +40,15 @@ public class practico4 extends javax.swing.JFrame {
         listaMaterias.add(web);
         listaMaterias.add(mat);
         listaMaterias.add(lab);
+        
+        n1.agregarMateria(web);
+        n1.agregarMateria(mat);
+        n1.agregarMateria(lab);
+        
+        n2.agregarMateria(web);
+        n2.agregarMateria(mat);
+        n2.agregarMateria(lab);
+        n2.agregarMateria(lab);
        
        
       
