@@ -1,10 +1,9 @@
-
 package clases;
 
 import java.util.Objects;
 
-
 public class Materia {
+
     protected int idMateria;
     protected String nombre;
     protected int anio;
@@ -64,6 +63,9 @@ public class Materia {
         return true;
     }
 
-    
-    
+    @Override
+    public String toString() {
+        return nombre;
+    }
+
 }

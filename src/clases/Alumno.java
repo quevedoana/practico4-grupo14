@@ -74,6 +74,11 @@ public class Alumno {
         return legajo == alumno.legajo;
     }
 
+    @Override
+    public String toString() {
+        return   apellido + " " + nombre ;
+    }
+
     
    
    
