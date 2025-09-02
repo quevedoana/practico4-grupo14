@@ -58,6 +58,7 @@ public class VerMateriasCargadas extends javax.swing.JInternalFrame {
         setTitle("Vista de Materias Cargadas");
         setToolTipText("");
 
+        SalirVerMaterias.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/close.png"))); // NOI18N
         SalirVerMaterias.setText("Salir");
         SalirVerMaterias.setToolTipText("Vista de Materias Cargadas");
         SalirVerMaterias.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -123,7 +124,7 @@ public class VerMateriasCargadas extends javax.swing.JInternalFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(16, Short.MAX_VALUE)
+                .addContainerGap(7, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
                 .addComponent(Scroll, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)

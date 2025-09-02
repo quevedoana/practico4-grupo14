@@ -85,13 +85,13 @@ public class FormulariodeInscripcion extends javax.swing.JInternalFrame {
         jLabel3.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel3.setText("Elija un Alumno:");
 
-        comboMaterias.setSelectedIndex(-1);
         comboMaterias.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 comboMateriasActionPerformed(evt);
             }
         });
 
+        btnInscribir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/archivo (1).png"))); // NOI18N
         btnInscribir.setText("Inscribir");
         btnInscribir.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnInscribir.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -105,6 +105,7 @@ public class FormulariodeInscripcion extends javax.swing.JInternalFrame {
             }
         });
 
+        btnSalirInscripcion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/close.png"))); // NOI18N
         btnSalirInscripcion.setText("Salir");
         btnSalirInscripcion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -151,7 +152,7 @@ public class FormulariodeInscripcion extends javax.swing.JInternalFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(comboAlumnos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnInscribir)
                     .addComponent(btnSalirInscripcion))

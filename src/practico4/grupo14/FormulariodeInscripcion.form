@@ -67,7 +67,7 @@
                   <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="comboAlumnos" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="44" max="32767" attributes="0"/>
+              <EmptySpace pref="35" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="btnInscribir" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="btnSalirInscripcion" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -127,9 +127,12 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnInscribir">
       <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/img/archivo (1).png"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Inscribir"/>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-          <Color id="Default Cursor"/>
+          <Color id="Cursor Por defecto"/>
         </Property>
       </Properties>
       <Events>
@@ -139,6 +142,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnSalirInscripcion">
       <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/img/close.png"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Salir"/>
       </Properties>
       <Events>
