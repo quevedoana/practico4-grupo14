@@ -43,7 +43,6 @@ public class AltadeAlumnos extends javax.swing.JInternalFrame {
         btnNuevoAlumno = new javax.swing.JButton();
         btnSalirAlumno = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(255, 255, 255));
         setTitle("Formulario Alumnos");
 
         lblTituloFormularioAlumnos.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
